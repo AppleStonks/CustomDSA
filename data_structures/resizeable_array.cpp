@@ -25,9 +25,9 @@ public:
     }
 
     int operator[](int index) const{
-        if (index > capacity -1){
+        if (index > numberOfElements -1){
             std::cout << "Index out of range";
-            return -1;
+            throw std::out_of_range("Index out of range");;
         }
         return array[index];
     }
@@ -59,7 +59,6 @@ public:
     }
 
 };
-
 
 int main(){
 
